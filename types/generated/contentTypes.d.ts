@@ -419,13 +419,14 @@ export interface ApiArticleArticle extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     description: Schema.Attribute.Text &
+      Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }> &
       Schema.Attribute.SetMinMaxLength<{
-        maxLength: 80;
+        maxLength: 200;
       }>;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<

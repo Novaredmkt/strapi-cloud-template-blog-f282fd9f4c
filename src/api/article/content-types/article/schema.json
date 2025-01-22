@@ -27,12 +27,13 @@
     },
     "description": {
       "type": "text",
-      "maxLength": 80,
+      "maxLength": 200,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      }
+      },
+      "required": true
     },
     "slug": {
       "type": "uid",
